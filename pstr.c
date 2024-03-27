@@ -7,16 +7,12 @@
  */
 void func_pstr(stack_t **head, unsigned int count)
 {
+	(void)count;
 	stack_t *p1 = *head;
-	
-	if (p1 == NULL)
-	{
-		printf("\n");
-		return;
-	}
+
 	while (p1 != NULL)
 	{
-		if (p1->n == 0 || p1->n > 127 || p1->n < 0)
+		if (p1->n <= 0 || p1->n > 127)
 			break;
 		printf("%c", p1->n);
 		p1 = p1->next;
