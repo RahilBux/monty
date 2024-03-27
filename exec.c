@@ -21,6 +21,7 @@ int exec_func(char *str, stack_t **stack, unsigned int count, FILE *file)
 		{"nop", func_nop},
 		{"sub", func_sub},
 		{"div", func_div},
+		{"mul", func_mul},
 		{NULL, NULL}
 	};
 

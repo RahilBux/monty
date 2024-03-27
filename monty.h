@@ -68,5 +68,6 @@ void func_add(stack_t **head, unsigned int count);
 void func_nop(stack_t **head, unsigned int count);
 void func_sub(stack_t **head, unsigned int count);
 void func_div(stack_t **head, unsigned int count);
+void func_mul(stack_t **head, unsigned int count);
 
 #endif
