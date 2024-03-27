@@ -63,5 +63,6 @@ void free_s(stack_t *head);
 void add_node(stack_t **head, int n);
 void func_pint(stack_t **head, unsigned int count);
 void func_pop(stack_t **head, unsigned int count);
+void func_swap(stack_t **head, unsigned int count);
 
 #endif
