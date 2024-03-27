@@ -27,7 +27,7 @@ void func_mod(stack_t **head, unsigned int count)
 	p1 = *head;
 	if (p1->n == 0)
 	{
-		fprintf(stderr, "L%d, division by zero\n", count);
+		fprintf(stderr, "L%d: division by zero\n", count);
 		fclose(carry.file);
 		free(carry.cont);
 		free_s(*head);
