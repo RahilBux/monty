@@ -1,4 +1,5 @@
 #include "monty.h"
+
 carry_t carry = {NULL, NULL, NULL, 0};
 /**
  * main - main code for monty

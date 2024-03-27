@@ -61,5 +61,6 @@ int exec_func(char *str, stack_t **stack, unsigned int count, FILE *file);
 void func_pall(stack_t **head, unsigned int count);
 void free_s(stack_t *head);
 void add_node(stack_t **head, int n);
-extern carry_t carry;
+void func_pint(stack_t **head, unsigned int count);
+
 #endif

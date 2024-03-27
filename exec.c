@@ -13,7 +13,9 @@ int exec_func(char *str, stack_t **stack, unsigned int count, FILE *file)
 {
 	instruction_t opfunc[] = {
 		{"push", func_push},
-		{"pall", func_pall}
+		{"pall", func_pall},
+		{"pint", func_pint},
+		{NULL, NULL}
 	};
 
 	unsigned int i = 0;
