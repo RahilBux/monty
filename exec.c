@@ -19,6 +19,7 @@ int exec_func(char *str, stack_t **stack, unsigned int count, FILE *file)
 		{"swap", func_swap},
 		{"add", func_add},
 		{"nop", func_nop},
+		{"sub", func_sub},
 		{NULL, NULL}
 	};
 
