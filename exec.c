@@ -15,6 +15,7 @@ int exec_func(char *str, stack_t **stack, unsigned int count, FILE *file)
 		{"push", func_push},
 		{"pall", func_pall},
 		{"pint", func_pint},
+		{"pop", func_pop},
 		{NULL, NULL}
 	};
 
