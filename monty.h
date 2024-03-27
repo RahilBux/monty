@@ -65,5 +65,6 @@ void func_pint(stack_t **head, unsigned int count);
 void func_pop(stack_t **head, unsigned int count);
 void func_swap(stack_t **head, unsigned int count);
 void func_add(stack_t **head, unsigned int count);
+void func_nop(stack_t **head, unsigned int count);
 
 #endif
