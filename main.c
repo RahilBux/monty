@@ -1,5 +1,5 @@
 #include "monty.h"
-
+carry_t carry = {NULL, NULL, NULL, 0};
 /**
  * main - main code for monty
  * @argc: argument count
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	{
 		str = NULL;
 		read = getline(&str, &size, file);
-		carry.str = str;
+		carry.cont = str;
 		count++;
 		if (read > 0)
 		{

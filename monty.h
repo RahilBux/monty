@@ -2,11 +2,11 @@
 #define MONTY_H
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <stddef.h>
 #include <unistd.h>
+#include <string.h>
 #include <sys/types.h>
 #include <fcntl.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -25,28 +25,27 @@ typedef struct stack_s
 } stack_t;
 
 /**
- * struct carry_s - struct
- * @args: arguments
- * @file: pointer to the file
- * @str: string to carry with content
- * @change: change
+ * struct carry_s - variables
+ * @args: value
+ * @file: pointer to file
+ * @cont: content
+ * @change: changes stack <-> queue
  *
- * Description: carries values to different functions
+ * Description: carries values to functions
  */
 typedef struct carry_s
 {
 	char *args;
 	FILE *file;
-	char *str;
+	char *cont;
 	int change;
 } carry_t;
-
 extern carry_t carry;
 
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
- * @f: function to handle opcode
+ * @f: function to handle the opcode
  *
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
@@ -57,10 +56,10 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void add_node(stack_t **head, int n);
-void free_s(stack_t *head);
 void func_push(stack_t **head, unsigned int count);
 int exec_func(char *str, stack_t **stack, unsigned int count, FILE *file);
 void func_pall(stack_t **head, unsigned int count);
-
+void free_s(stack_t *head);
+void add_node(stack_t **head, int n);
+extern carry_t carry;
 #endif

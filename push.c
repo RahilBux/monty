@@ -22,7 +22,7 @@ void func_push(stack_t **head, unsigned int count)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", count);
 			fclose(carry.file);
-			free(carry.str);
+			free(carry.cont);
 			free_s(*head);
 			exit(EXIT_FAILURE);
 		}
@@ -31,7 +31,7 @@ void func_push(stack_t **head, unsigned int count)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", count);
 		fclose(carry.file);
-		free(carry.str);
+		free(carry.cont);
 		free_s(*head);
 		exit(EXIT_FAILURE);
 	}
