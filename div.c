@@ -11,14 +11,6 @@ void func_div(stack_t **head, unsigned int count)
 	int result, len = 0;
 
 	p1 = *head;
-	if (p1->n == 0)
-	{
-		fprintf(stderr, "L%d: division by zero\n", count);
-		fclose(carry.file);
-		free(carry.cont);
-		free_s(*head);
-		exit(EXIT_FAILURE);
-	}
 	while (p1 != NULL)
 	{
 		p1 = p1->next;
@@ -33,6 +25,14 @@ void func_div(stack_t **head, unsigned int count)
 		exit(EXIT_FAILURE);
 	}
 	p1 = *head;
+	if (p1->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", count);
+		fclose(carry.file);
+		free(carry.cont);
+		free_s(*head);
+		exit(EXIT_FAILURE);
+	}
 	result = p1->next->n / p1->n;
 	p1->next->n = result;
 	*head = p1->next;
