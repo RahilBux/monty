@@ -12,8 +12,7 @@
 int exec_func(char *str, stack_t **stack, unsigned int count, FILE *file)
 {
 	instruction_t opfunc[] = {
-		{"push", func_push},
-		{"pall", func_pall},
+		{"push", func_push}, {"pall", func_pall},
 		{"pint", func_pint},
 		{"pop", func_pop},
 		{"swap", func_swap},
@@ -23,6 +22,7 @@ int exec_func(char *str, stack_t **stack, unsigned int count, FILE *file)
 		{"div", func_div},
 		{"mul", func_mul},
 		{"mod", func_mod},
+		{"pchar", func_pchar},
 		{NULL, NULL}
 	};
 
