@@ -7,9 +7,10 @@
  */
 void func_pstr(stack_t **head, unsigned int count)
 {
+	stack_t *p1;
 	(void)count;
-	stack_t *p1 = *head;
 
+	p1 = *head;
 	while (p1 != NULL)
 	{
 		if (p1->n <= 0 || p1->n > 127)
