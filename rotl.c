@@ -10,6 +10,9 @@ void func_rotl(stack_t **head, unsigned int count)
 	stack_t *p1, *p2;
 	(void)count;
 
+	if (*head == NULL || (*head)->next == NULL)
+		return;
+
 	p1 = *head;
 	p2 = *head;
 	while (p1->next != NULL)
